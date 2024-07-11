@@ -10,7 +10,10 @@ const Modal = forwardRef(({ buttonCaption, children }, ref) => {
     },
   }));
   return createPortal(
-    <dialog ref={dialog}>
+    <dialog
+      ref={dialog}
+      className="backdrop:bg-stone-900/90 p-4 rounded-md shadow-m"
+    >
       {children}
       <form method="dialog">
         <button>{buttonCaption}</button>
