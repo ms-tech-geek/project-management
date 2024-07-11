@@ -17,13 +17,13 @@ const App = () => {
     }));
   };
 
-  const handleDeleteProject = (projectId) => {
+  const handleDeleteProject = () => {
     setProjectState((prevState) => {
       return {
         ...prevState,
         selectedProjectId: undefined,
         projects: prevState.projects.filter(
-          (project) => project.id !== projectId
+          (project) => project.id !== prevState.selectedProjectId
         ),
       };
     });
