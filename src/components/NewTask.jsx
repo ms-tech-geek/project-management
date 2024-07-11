@@ -1,13 +1,14 @@
 import { useState } from 'react';
 
 const NewTask = ({ onAdd }) => {
-  const [task, setTask] = useState({});
+  const [task, setTask] = useState('');
 
   const handleChange = (event) => {
     setTask(event.target.value);
   };
 
   const handleClick = () => {
+    if (task.trim() === '') return;
     onAdd(task);
     setTask('');
   };
