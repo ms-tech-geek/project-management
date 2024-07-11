@@ -2,6 +2,7 @@ import Tasks from './Tasks';
 
 const SelectedProject = ({
   project,
+  tasks,
   onDeleteProject,
   onAddTask,
   onDeleteTask,
@@ -31,7 +32,7 @@ const SelectedProject = ({
           {project.description}
         </p>
       </header>
-      <Tasks onAdd={onAddTask} onDelete={onDeleteTask} />
+      <Tasks tasks={tasks} onAdd={onAddTask} onDelete={onDeleteTask} />
     </div>
   );
 };

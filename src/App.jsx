@@ -15,7 +15,7 @@ const App = () => {
     setProjectState((prevState) => {
       const taskId = Math.random();
       const newTask = {
-        task: taskInfo,
+        text: taskInfo,
         id: taskId,
         projectId: prevState.selectedProjectId,
       };
@@ -84,6 +84,7 @@ const App = () => {
   let content = (
     <SelectedProject
       project={selectedProject}
+      tasks={projectState.tasks}
       onDeleteProject={handleDeleteProject}
       onAddTask={handleAddTask}
       onDeleteTask={handleDeleteTask}
